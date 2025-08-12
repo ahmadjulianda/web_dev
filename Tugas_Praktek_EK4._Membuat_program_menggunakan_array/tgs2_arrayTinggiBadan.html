@@ -1,0 +1,27 @@
+<html>
+    <h1>Data Tinggi Badan yang Diurutkan</h1>
+    <ul id="list"></ul>
+</html>
+
+<script>
+const dataTinggi = [
+  {nama: "Rose", tinggi: 178},
+  {nama: "Magnolia", tinggi: 153},
+  {nama: "Daisy", tinggi: 165},
+  {nama: "Jasmine", tinggi: 161},
+  {nama: "Violet", tinggi: 159},
+];
+
+dataTinggi.sort((a, b) => a.nama.localeCompare(b.nama))
+
+const container = document.getElementById('list')
+
+// Selesaikan loop for di bawah
+for (let i = 0; i < dataTinggi.length; i++) {
+  const character = dataTinggi[i];
+  console.log(`${character.nama} : ${character.tinggi} cm`);
+  const newEl = document.createElement('li')
+  newEl.innerText = `${dataTinggi[i].nama} : ${dataTinggi[i].tinggi} cm`
+  container.appendChild(newEl)
+}
+</script>
