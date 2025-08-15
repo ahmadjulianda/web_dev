@@ -1,18 +1,20 @@
-let product = [
-    {id: 1, name: 'Produk A', price: 10000},
-    {id: 2, name: 'Produk B', price: 15000}
-];
+const {param} = require("../routes/product")
+
+let products = [
+    {id: 1, name: 'telur', price: 10000},
+    {id: 2, name: 'mie sedap', price: 15000}
+]
 
 exports.getAllProducts = (req, res) => {
     res.status(200).json(products);
-};
+}
 
 exports.getProductById = (req, res) => {
     const id = parseInt(req.params.id);
     const product = products.find(p => p.id === id);
     if (!product) return res.status(404).json({message: 'Produk tidak ditemukan'});
     res.status(200).json(product);
-};
+}
 
 exports.createProduct = (req, res) => {
     const {name, price} = req.body;
@@ -28,7 +30,7 @@ exports.createProduct = (req, res) => {
 
     products.push(newProduct);
     res.status(201).json(newProduct);
-};
+}
 
 exports.updateProduct = (req, res) => {
     const id = parseInt(req.params.id);
@@ -43,7 +45,7 @@ exports.updateProduct = (req, res) => {
     product.name = name;
     product.price = price;
     res.status(200).json(product);
-    };
+    }
 
     exports.deleteProduct = (req, res) => {
         const id = parseInt(req.params.id);
@@ -52,4 +54,4 @@ exports.updateProduct = (req, res) => {
 
         products.splice(index, 1);
         res.status(204).send();
-    };
+    }
