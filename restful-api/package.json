@@ -1,0 +1,21 @@
+{
+  "name": "restful-api",
+  "version": "1.0.0",
+  "description": "Contoh RESTful API sederhana dengan Express.js (in-memory products).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "express",
+    "rest",
+    "api",
+    "products"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
