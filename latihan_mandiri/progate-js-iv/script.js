@@ -14,3 +14,18 @@ const pengguna = {
     }
 };
 pengguna.greet();
+
+
+
+// 3. membuat instance(object baru) dan 4. constructor
+class Animal {
+    // Tambahkan constructor
+    constructor() {
+        //console.log("Membuat instance baru");
+        this.name = "Leo";
+    }
+}
+
+//tetapkan nama instance
+const animal = new Animal();
+console.log(animal);
