@@ -81,6 +81,7 @@ console.log("nama: " + animal.name + ", umur: " + animal.age);
 
 //===========================================================================================================
 
+/*
 class Animal {
     constructor(name, age, country) {
         this.name = name;
@@ -100,3 +101,28 @@ console.log("nama: " + penguin.name + ", umur: " + penguin.age);
 
 const kangguru = new Animal("Kangguru", 2, "Antartika");
 console.log("nama: " + kangguru.name + ", umur: " + kangguru.age);
+*/
+
+// ==========================================================================================
+
+// 8. method(2)
+
+class Animal {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    greet() {
+        console.log("Halo");
+    }
+
+    // tamnbahkan method info
+    info() {
+        console.log(`Nama saya adalah ${this.name}`);
+        console.log(`saya berusia ${this.age}`);
+    }
+}
+
+const animal = new Animal("Leo", 3);
+animal.greet();
+animal.info();
