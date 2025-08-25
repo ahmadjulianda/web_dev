@@ -1,13 +1,18 @@
-import daftarSiswa from "./components/daftarSiswa";
-
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import DaftarSiswa from "./components/DaftarSiswa";
+import TambahSiswa from "./components/TambahSiswa";
+import EditSiswa from "./components/EditSiswa";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-5xl text-sky-600 font-bold underline bg-black">
-        Hello world!
-      </h1>
-      <daftarSiswa />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<DaftarSiswa/>}/>
+          <Route path="/add" element={<TambahSiswa />} />
+          <Route path="/edit/:id" element={<EditSiswa />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

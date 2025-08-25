@@ -13,5 +13,5 @@ app.use(siswaRoute)
 
 const PORT=8000
 app.listen(PORT,() => {
-    console.log("server berjalan.. OK!!");
+    console.log("server berjalan di http//localhost:8000 !!");
 })
