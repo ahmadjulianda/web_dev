@@ -1,10 +1,17 @@
-
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import StokBarang from "./components/stokBarang";
+import TambahBarang from "./components/TambahBarang";
+import EditBarang from "./components/EditBarang";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<StokBarang/>}/>
+        <Route path="/add" element={<TambahBarang />} />
+        <Route path="/edit/:id" element={<EditBarang />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
