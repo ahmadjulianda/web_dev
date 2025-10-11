@@ -50,7 +50,7 @@ export const updateSiswa = async(req, res) => {
 
         res.json({ message: 'Siswa create successfully', siswa})
     } catch (error) {
-        res.status(402).json({message:error.message})
+        res.status(403).json({message:error.message})
     }
 }
 
@@ -63,6 +63,6 @@ export const deleteSiswa = async(req, res) => {
         })
         res.status(200).json(respone)
     } catch (error) {
-        res.status(401).json({message:error.message})
+        res.status(404).json({message:error.message})
     }
 }
